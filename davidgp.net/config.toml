@@ -3,7 +3,12 @@ title = "David's Code Diary"
 author = "David García Pérez"
 canonifyurls = true
 languagecode = "en"
-theme = "hugo-tanka"
+paginate = 5
+theme = "hugo-PaperMod"
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpiered = false
 
 enableEmoji = true
 hasCJKLanguage = false
@@ -14,36 +19,70 @@ pygmentscodefences = true
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\\.md$"]
 
 [params]
-  sitename = "David's Code Diary"
-  faviconfile = "images/favicon.png"
-  highlightjs = true
-  highlightjslanguages = ["r", "python", "bash", "java", "go"]
-  uselatex = true
-  progressively = false
-# commentsrepo = "user/repo"
+  env = "production"
+  title = "David's Code Diary"
+  description = "Personal notes on things I will probably need to remember in the future"
+  author = "David García Pérez"
+  ShowReadingTime = true
+  ShowShareButtons = true
+  comments = false
+  defaultTheme = "light"
+  disableThemeToggle = true
+  disableSpecial1stPost = false
 
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
+  [params.assets]
+    favicon = "images/favicon.png"
+    
+    # assets:
+    #     favicon: "<link / abs url>"
+    #     favicon16x16: "<link / abs url>"
+    #     favicon32x32: "<link / abs url>"
+    #     apple_touch_icon: "<link / abs url>"
+    #     safari_pinned_tab: "<link / abs url>"
 
-[[menu.primary]]
-    name = "Home"
-    url = "/"
-    weight = 1
-[[menu.primary]]
-    name = "About"
-    url = "/about/"
-    weight = 2
-[[menu.primary]]
-    name = "GitHub"
-    url = "https://github.com/davidgp1701"
-    weight = 3
-[[menu.primary]]
-    name = "Twitter"
-    url = "https://twitter.com/davidgp"
-    weight = 4
-[[menu.primary]]
-    name = "Subscribe"
-    url = "/index.xml"
-    weight = 5
+    # label:
+    #     text: "Home"
+    #     icon: /apple-touch-icon.png
+    #     iconHeight: 35
+
+[minify]
+  disableXML = true
+  minifyOutput = true
+
+    # # profile-mode
+    # profileMode:
+    #     enabled: false # needs to be explicitly set
+    #     title: ExampleSite
+    #     # imageUrl: '<img location>'
+    #     # imageTitle: my image
+    #     buttons:
+    #         - name: Posts
+    #           url: posts
+    #         - name: Tags
+    #           url: tags
+
+    # # home-info mode
+    # homeInfoParams:
+    #     Title: "Hi there \U0001F44B"
+    #     Content: Welcome to my blog
+
+    # socialIcons:
+    #     - name: twitter
+    #       url: "https://twitter.com/"
+    #     - name: stackoverflow
+    #       url: "https://stackoverflow.com"
+    #     - name: github
+    #       url: "https://github.com/"
+
+[menu]
+  [[menu.main]]
+    identifier = "categories"
+    name = "categories"
+    url = "/categories/"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "tags" 
+    name = "tags"
+    url = "/tags/"
+    weight = 20

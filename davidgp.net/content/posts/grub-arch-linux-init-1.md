@@ -2,6 +2,14 @@
 title: "Start Arch Linux in Single User Mode"
 date: 2021-01-02T20:08:00+01:00
 draft: false
+categories:
+- Linux
+tags:
+- Arch Linux
+- LightDM
+- Single User
+- Grub
+- SystemD
 ---
 
 The other day, after performing several updates to my system, I restarted it to load the new Linux kernel. After the restart, [LightDM][1] was not able to start. It was crashing, [SystemD][2] automatically restarting it and I was not able to even login into the system via a console terminal due to the restart loop of [LightDM][1].
