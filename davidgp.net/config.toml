@@ -1,6 +1,7 @@
 baseurl = "https://davidgp.net"
 title = "David's Code Diary"
 author = "David García Pérez"
+copyright = "&#169; David García Pérez"
 canonifyurls = true
 languagecode = "en"
 paginate = 5
